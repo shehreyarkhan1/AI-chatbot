@@ -1,118 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your CV</title>
+    <title>Page Layout</title>
     <style>
-        /* Reset some default styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: maroon;
-        }
-
-        /* Container for the CV */
-        .cv-container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: yellow;
-            padding: 20px;
-            box-shadow: red;
-        }
-
-        /* Header section */
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .header h1 {
-            color: #333;
-        }
-
-        /* Personal information section */
-        .personal-info {
-            margin-bottom: 20px;
-        }
-
-        /* Work experience section */
-        .work-experience {
-            margin-bottom: 20px;
-        }
-
-        /* Education section */
-        .education {
-            margin-bottom: 20px;
-        }
-
-        /* Skills section */
-        .skills {
-            margin-bottom: 20px;
-        }
-
-        /* Center the image */
-        .image-container {
+        .navbar {
             display: flex;
-            justify-content: center;
+            /* border: 2px solid red; */
+            justify-content: space-between;
+            margin: 0 2rem 0 2rem;
             align-items: center;
         }
 
-        /* Footer section */
-        .footer {
+        .navbar .left {
+            display: flex;
+            align-items: center;
+            /* border: 2px solid gray; */
+        }
+
+        .navbar .left img {
+            width: 80px;
+        }
+
+        .navbar .middle {
+            display: flex;
+            align-items: center;
+            flex-grow: 0.5;
+            /* border: 2px solid greenyellow; */
+        }
+
+        .navbar .middle input {
+            flex-grow: 1;
+            padding: 6px;
+            margin-right: 10px;
+            border-radius: 15px;
+        }
+
+        .navbar .middle button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .navbar .right {
+            display: flex;
+            align-items: center;
+            flex-basis: 100px;
+            justify-content: space-around;
+            /* border: 2px solid yellow; */
+        }
+
+        .navbar .right button {
+            border: none;
+            background: transparent;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger-menu div {
+            width: 20px;
+            height: 1px;
+            background-color: black;
+            margin: 3px 0;
+            transition: 0.4s;
+
+
+
+        }
+
+        .show-menu .hamburger-menu div:nth-child(1) {
+            transform: rotate(-45deg) translate(-2px, 4px);
+        }
+
+        .show-menu .hamburger-menu div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .show-menu .hamburger-menu div:nth-child(3) {
+            transform: rotate(45deg) translate(-2px, -4px);
+        }
+
+        /* Additional Settings */
+        .additional-settings {
+            display: none;
+            position: absolute;
+            background-color: white;
+            /* border: 13px solid gray; */
+            right: 0;
+
+            top: calc(10% + 10px);
+            margin-right: 25px;
+        }
+
+        .show-menu .additional-settings {
+            display: block;
+        }
+
+        .video-section {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            /* background-color: brown; */
+            /* border: 2px solid yellow; */
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left
+        }
+
+        li a {
+            display: block;
+
+            margin-right: 80px;
+            color: black;
             text-align: center;
-            font-size: 14px;
-            color: #888;
+            padding: 20px;
+            align-items: center;
+            text-decoration: none;
+            justify-content: space-between;
+        }
+
+        li a:hover {
+            background-color: peachpuff;
+            border-radius: 400px;
+        }
+
+        .home {
+            display: flex;
+            margin-left: 250px;
         }
     </style>
 </head>
 
 <body>
-    <div class="cv-container">
-        <div class="image-container">
-            <img src="image1.JPG" style="border-radius: 50px; width: 50px; height: 50px;" width="50px">
+    <nav class="navbar">
+        <div class="left">
+            <a href=""><img src="images/image1.png" alt=""></a>
         </div>
-        <div class="header">
-            <h1>Shehreyar khan</h1>
-            <p>Web Developer</p>
+        <div class="middle">
+            <input type="text" name="query" placeholder="Search...">
+            <button type="submit"><img src="images/image3.png" width="17px" alt=""></button>
+            <button type="submit"><img src="images/image2.png" width="17px" alt=""></button>
         </div>
+        <div class="right">
+            <a href=""><img src="images/image6.png" width="19px" alt=""></a>
+            <a href=""><img src="images/image4.png" width="19px" alt=""></a>
+            <a href=""><img src="images/image5.jpg" width="30px" style="border-radius: 100%;"></a>
+            <!-- Hamburger menu icon -->
+            <div class="hamburger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Additional settings -->
+            <div class="additional-settings">
+                <!-- Add your additional settings content here -->
+                <p>Settings</p>
+                <p>Profile</p>
+                <p>Logout</p>
+            </div>
+        </div>
+    </nav>
+    <div class="home">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Trending</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Subscriptions</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Library</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">History</a></li>
+        </ul>
+    </div>
+    <div class="video-section">
 
-        <div class="personal-info">
-            <h2>Personal Information</h2>
-            <p>Email: shehreyar882@gmail.com</p>
-            <p>Phone: 03334504157</p>
-            <p>Address: University town peshawar</p>
-        </div>
+        <!-- Video section -->
+        <section>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+                   </section>
 
-        <div class="work-experience">
-            <h2>Work Experience</h2>
-            <p><strong>Full-time work in NASA</strong> - Web Developer (3 Years)</p>
-            <p>Date: 12/5/2000</p>
-            <h2>Description of your responsibilities and achievements in this role</h2>
-            <p>Handling webwork, providing services of the company to the people, and managing events</p>
-        </div>
-
-        <div class="education">
-            <h2>Education: BS Software Engineering</h2>
-            <p><strong>University Name</strong> - Sarhad University of Science and Information Technology</p>
-            <p>Date: September 2020 - May 2024</p>
-        </div>
-
-        <div class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>Responsive Web Design</li>
-                <li>Web Development Frameworks (e.g., React, Angular)</li>
-            </ul>
-        </div>
+        <!-- ... (the rest of your page content) ... -->
     </div>
 
-    <div class="footer">
-    </div>
+    <script>
+        // JavaScript to toggle the hamburger menu
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navbar = document.querySelector('.navbar');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navbar.classList.toggle('show-menu');
+        });
+    </script>
 </body>
 
 </html>
