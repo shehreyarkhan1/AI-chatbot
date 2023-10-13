@@ -2,232 +2,402 @@
 <html>
 
 <head>
-    <title>Page Layout</title>
+    <title>website Page</title>
     <style>
         .navbar {
             display: flex;
-            /* border: 2px solid red; */
+            align-items: center;
             justify-content: space-between;
-            margin: 0 2rem 0 2rem;
-            align-items: center;
         }
 
-        .navbar .left {
+        .navbar1 {
             display: flex;
-            align-items: center;
-            /* border: 2px solid gray; */
         }
 
-        .navbar .left img {
-            width: 80px;
-        }
-
-        .navbar .middle {
+        .header-ul {
             display: flex;
-            align-items: center;
-            flex-grow: 0.5;
-            /* border: 2px solid greenyellow; */
-        }
-
-        .navbar .middle input {
-            flex-grow: 1;
-            padding: 6px;
-            margin-right: 10px;
-            border-radius: 15px;
-        }
-
-        .navbar .middle button {
-            border: none;
-            background: transparent;
-            cursor: pointer;
-        }
-
-        .navbar .right {
-            display: flex;
-            align-items: center;
-            flex-basis: 100px;
-            justify-content: space-around;
-            /* border: 2px solid yellow; */
-        }
-
-        .navbar .right button {
-            border: none;
-            background: transparent;
-        }
-
-        /* Hamburger Menu Styles */
-        .hamburger-menu {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger-menu div {
-            width: 20px;
-            height: 1px;
-            background-color: black;
-            margin: 3px 0;
-            transition: 0.4s;
-
-
-
-        }
-
-        .show-menu .hamburger-menu div:nth-child(1) {
-            transform: rotate(-45deg) translate(-2px, 4px);
-        }
-
-        .show-menu .hamburger-menu div:nth-child(2) {
-            opacity: 0;
-        }
-
-        .show-menu .hamburger-menu div:nth-child(3) {
-            transform: rotate(45deg) translate(-2px, -4px);
-        }
-
-        /* Additional Settings */
-        .additional-settings {
-            display: none;
-            position: absolute;
-            background-color: white;
-            /* border: 13px solid gray; */
-            right: 0;
-
-            top: calc(10% + 10px);
-            margin-right: 25px;
-        }
-
-        .show-menu .additional-settings {
-            display: block;
-        }
-
-        .video-section {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: 50px;
-        }
-
-        ul {
-            list-style-type: none;
-            /* background-color: brown; */
-            /* border: 2px solid yellow; */
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            list-style-type: none;
         }
 
-        li {
-            float: left
+        .header-li {
+            float: left;
         }
 
-        li a {
+        .header-li-a a {
             display: block;
-
-            margin-right: 80px;
-            color: black;
+            color: white;
             text-align: center;
-            padding: 20px;
-            align-items: center;
+            padding: 30px;
             text-decoration: none;
-            justify-content: space-between;
+            font-size: 18px;
         }
 
-        li a:hover {
-            background-color: peachpuff;
-            border-radius: 400px;
+        .header-li a:hover {
+            background-color: blue;
         }
 
-        .home {
+        .navbar2 {
+            text-decoration: none;
+        }
+
+        .navbar3 {
+            width: 600px;
+            height: 550px;
+            margin-left: 320px;
+            margin-top: 2px;
             display: flex;
-            margin-left: 250px;
+        }
+
+        .image {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .greensection {
+            background-color: blue;
         }
     </style>
 </head>
 
-<body>
+<body style="background-color: black; color: white;">
     <nav class="navbar">
-        <div class="left">
-            <a href=""><img src="images/image1.png" alt=""></a>
+        <div class="navbar1">
+            <img src="images/image1.png" width="90px" alt="">
         </div>
-        <div class="middle">
-            <input type="text" name="query" placeholder="Search...">
-            <button type="submit"><img src="images/image3.png" width="17px" alt=""></button>
-            <button type="submit"><img src="images/image2.png" width="17px" alt=""></button>
+        <div>
+            <ul class="header-ul">
+                <li class="header-li header-li-a"><a href="">Research</a></li>
+                <li class="header-li header-li-a"><a href="">API</a></li>
+                <li class="header-li header-li-a"><a href="">ChatPGT</a></li>
+                <li class="header-li header-li-a"><a href="">Safety</a></li>
+                <li class="header-li header-li-a"><a href="">Company</a></li>
+            </ul>
         </div>
-        <div class="right">
-            <a href=""><img src="images/image6.png" width="19px" alt=""></a>
-            <a href=""><img src="images/image4.png" width="19px" alt=""></a>
-            <a href=""><img src="images/image5.jpg" width="30px" style="border-radius: 100%;"></a>
-            <!-- Hamburger menu icon -->
-            <div class="hamburger-menu">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <!-- Additional settings -->
-            <div class="additional-settings">
-                <!-- Add your additional settings content here -->
-                <p>Settings</p>
-                <p>Profile</p>
-                <p>Logout</p>
-            </div>
+        <div class="navbar2">
+            <ul class="header-ul">
+                <li class="header-li header-li-a"><a href="">Search</a></li>
+                <li class="header-li header-li-a"><a href="">Login</a></li>
+            </ul>
         </div>
+        <button
+            style="font-size: 20px; margin-right: 10px; background-color: black; color: white;">TryChatGPT</button>
     </nav>
-    <div class="home">
-        <ul>
-            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Trending</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Subscriptions</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Library</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">History</a></li>
-        </ul>
+    <div class="navbar3">
+        <div>
+            <p style="font-size: 120px;">DALL.E3</p>
+            <p style="font-size: 20px;">DALL·E 3 understands significantly more nuance and detail than our previous
+                systems, allowing you to
+                easily translate your ideas into exceptionally accurate images.</p>
+            <div>
+                <button style="font-size: 20px; background-color: black; color: aliceblue; border: solid white;"
+                    type="button">Follow us on Instagram</button>
+                <a style="font-size: 20px; margin-left: 10px; color: white; background-color: black; "
+                    href="">TryChatGPT(DALL.E3 Coming soon!)</a>
+            </div>
+        </div>
     </div>
-    <div class="video-section">
+    <div class="image">
+        <div>
+            <a href=""><img src="images/image2.jpg" width="310px" alt=""></a>
+        </div>
+        <div>
+            <a href=""><img src="images/image3.jpg" width="310px" alt=""></a>
+        </div>
+        <div>
+            <a href=""><img src="images/image4.jpg" width="310px" alt=""></a>
+        </div>
+        <div>
+            <a href=""><img src="images/image5.jpg" width="310px" alt=""></a>
+        </div>
 
-        <!-- Video section -->
-        <section>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-                   </section>
-
-        <!-- ... (the rest of your page content) ... -->
+    </div>
+    <hr>
+    <div style="  display: flex;">
+        <div style="width: 700px;">
+            <h2 style="font-size: 40px;">About DALL·E 3</h2>
+        </div>
+        <div>
+            <p style="font-size: 30px; margin-left: 500px;">
+                DALL·E 3 is now in research preview and will be available to ChatGPT Plus and Enterprise customers in
+                October, via the API and in Labs later this fall.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p style="font-size: 50px; padding: 15px;">Modern text-to-image systems have a tendency to ignore words or
+            descriptions, forcing users to learn prompt engineering. DALL·E 3 represents a leap forward in our ability to
+            generate images that exactly adhere to the text you provide.</p>
+        <img src="images/image9.jpg">
+        <hr>
+        <p style="font-size: 60px; padding: 10px;">Even with the same prompt, DALL·E 3 delivers significant improvements
+            over DALL·E 2.
+        </p>
+        <img src="images/image8.jpg">
     </div>
 
-    <script>
-        // JavaScript to toggle the hamburger menu
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const navbar = document.querySelector('.navbar');
+    <!-- The green section of the website starts from here  -->
 
-        hamburgerMenu.addEventListener('click', () => {
-            navbar.classList.toggle('show-menu');
-        });
-    </script>
+    <div class="greensection">
+        <br>
+        <br>
+        <br>
+        <hr>
+        <div style="padding: 15px;">
+            <p style="font-size: 50px;">DALL·E 3 is built natively on ChatGPT, which lets you use ChatGPT as a brainstorming partner and refiner of your prompts. Just ask ChatGPT what you want to see in anything from a simple sentence to a detailed paragraph.</p>
+            <hr>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 15px;">
+            <div style="width: 1600px; height: 300px;">
+                <p style="font-size: 50px;">DALL·E 3 in ChatGPT</p>
+            </div>
+            <div>
+                <p style="font-size: 25px; margin-left: 250px;">
+                    When prompted with an idea, ChatGPT will automatically generate tailored, detailed prompts for DALL·E 3 that bring your idea to life. If you like a particular image, but it’s not quite right, you can ask ChatGPT to make tweaks with just a few words.</p>
+                <p style="font-size: 25px; margin-left: 250px;">DALL·E 3 will be available to ChatGPT Plus and Enterprise customers in early October. As with DALL·E 2, the images you create with DALL·E 3 are yours to use, and you don't need our permission to reprint, sell, or merchandise them.</p>
+            </div>
+
+        </div>
+
+        <video style="padding: 15px;" src="images/video.mp4" controls width="1300px"></video>
+
+        <!-- After the video section, the coding starts from here -->
+        <div style="background-color: black;">
+            <br>
+                <br>
+                <br>
+                <hr>
+
+            <div style="background-color: black; display: flex; padding: 15px; ">
+
+                
+                <div style="width: 700px; padding: 15px;">
+                    <p style="font-size: 45px;">A focus on safety</p>
+                </div>
+                <div style="padding: 15px;">
+                    <p style="font-size: 30px; margin-left: 360px;">
+                        Like previous versions, we’ve taken steps to limit DALL·E 3’s ability to generate violent, adult, or hateful content.</p>
+                </div>
+            </div>
+            <div style="background-color: black; display: flex; padding: 15px;">
+                <div style="width: 1950px; padding: 15px;">
+                    <h1>Preventing harmful generations</h1>
+                </div>
+                <div>
+                    <p style="font-size: 20px; margin-left: 280px; padding: 15px;">
+                        DALL·E 3 has mitigations to decline requests that ask for a public figure by name. We improved safety performance in risk areas like generation of public figures and harmful biases related to visual over/under-representation, in partnership with red teamers—domain experts who stress-test the model—to help inform our risk assessment and mitigation efforts in areas like propaganda and misinformation.</p>
+                </div>
+
+            </div>
+
+            <div style="background-color: black; display: flex; padding: 15px;">
+                <div style="width: 1850px;">
+                    <h1>Internal testing</h1>
+
+                </div>
+                <div>
+                    <p style="font-size: 20px; margin-left: 280px; padding: 15px;">
+                        We’re also researching the best ways to help people identify when an image was created with AI. We’re experimenting with a provenance classifier—a new internal tool that can help us identify whether or not an image was generated by DALL·E 3—and hope to use this tool to better understand the ways generated images might be used. We’ll share more soon.</p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+            <div style=" display: flex;">
+                <div style="width: 1150px;">
+                    <h1 style="font-size: 50px;">Creative control</h1>
+
+                </div>
+
+                <div>
+                    <p style="font-size: 30px; margin-left: 280px; padding: 15px;">
+                        DALL·E 3 is designed to decline requests that ask for an image in the style of a living artist. Creators can now also opt their images out from training of our future image generation models.
+                    </p>
+
+                </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; gap: 3px;">
+                <img src="images/images2/image1.jpeg">
+                <img src="images/images2/image2.png">
+                <img src="images/images2/image3.jpeg">
+                <img src="images/images2/image4.png">
+                <img src="images/images2/image5.jpeg">
+                <img src="images/images2/image6.png">
+                <img src="images/images2/image7.jpeg">
+                <img src="images/images2/image8.jpeg">
+                <img src="images/images2/image9.jpeg">
+                <img src="images/images2/image10.jpeg">
+                <img src="images/images2/image11.jpeg">
+                <img src="images/images2/image12.png">
+                <img src="images/images2/image13.jpeg">
+                <img src="images/images2/image14.jpeg">
+                <img src="images/images2/image15.png">
+                <img src="images/images2/image16.png">
+                <img src="images/images2/image17.jpeg">
+                <img src="images/images2/image18.jpeg">
+                <img src="images/images2/image19.jpeg">
+                <img src="images/images2/image20.jpeg">
+                <img src="images/images2/image21.png">
+                <img src="images/images2/image22.png">
+            </div>
+            <div style="display: flex;">
+                <div style="display: flex;">
+                    <h1 style="background-color: black; color: white;">Credits</h1>
+                </div>
+                <div style="display: flex; margin-left: 650px;">
+                    <p style="font-size: 22px; margin-left: 2px;">Core Research and Execution
+                        Gabriel Goh, James Betker, Li Jing, Aditya Ramesh</p>
+                </div>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Research Contributors—Primary
+                    Tim Brooks, Jianfeng Wang, Lindsey Li, Long Ouyang, Juntang Zhuang, Joyce Lee, Prafulla Dhariwal, Casey Chu, Joy Jiao</p>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Research Contributors—Secondary
+                    Jong Wook Kim, Alex Nichol, Yang Song, Lijuan Wang, Tao Xu</p>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Inference Optimization
+                    Connor Holmes, Arash Bakhtiari, Umesh Chand, Zhewei Yao, Samyam Rajbhandari, Yuxiong He</p>
+            </div>
+            <div style="display: flex;  margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Product—Primary
+                    Yufei Guo, Luke Miller, Joyce Lee, Wesam Manassra, Anton Tananaev, Chester Cho, Rachel Lim, Meenaz Merchant</p>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Product—Secondary
+                    Dave Cummings, Rajeev Nayak, Sriya Santhanam</p>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Safety—Primary
+                    Sandhini Agarwal, Michael Lampe, Katarina Slama, Kim Malfacini, Bilva Chandra, Ashyana-Jasmine Kachra, Rosie Campbell, Florencia Leoni Aleman, Madelaine Boyd, Shengli Hu, Johannes Heidecke</p>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Safety—Secondary
+                    Lama Ahmad, Chelsea Carlson, Henry Head, Andrea Vallone, CJ Weinmann, Lilian Weng</p>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Communications
+                    Alex Baker-Whitcomb, Ryan Biddy, Ruby Chen, Thomas Degry, Niko Felix, Elie Georges, Lindsey Held, Chad Nelson, Kendra Rimbach, Natalie Summers, Justin Wang, Hannah Wong, Kayla Wood</p>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Legal and Public Policy
+                    Che Chang, Jason Kwon, Fred von Lohmann, Ashley Pantuliano, David Robinson, Tom Rubin, Thomas Stasi</p>
+            </div>
+            <div style="display: flex; margin-left: 650px;">
+                <p style="font-size: 22px; margin-left: 104px;">Special Thanks
+                    Alec Radford, Mark Chen, Katie Mayer, Misha Bilenko, Mikhail Parakhin, Bob McGrew, Mira Murati, Greg Brockman, Sam Altman</p>
+            </div>
+
+
+            <div style=" display: flex;">
+                <div>
+                    <img src="images/image1.png" width="170px" alt="">
+                </div>
+                <div style="margin-left: 400px; display: flex; font-size: 25px; text-decoration: none; ">
+                    <div>
+                        <ul style="list-style: none;">
+                            <li>Research</li>
+                            <li>Index</li>
+                            <li>Overview</li>
+                            <li>GPT-4</li>
+                            <li>DALL-E3</li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <ul style="list-style: none;">
+                            <li>API</li>
+                            <li>Overview</li>
+                            <li>Data privacy</li>
+                            <li>Pricing</li>
+                            <li>Docs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul style="list-style: none;">
+                            <li>ChatGPT</li>
+                            <li>Index</li>
+                            <li>Overview</li>
+                            <li>Enterprise</li>
+                            <li>Try ChatGPT</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul style="list-style: none;">
+                            <li>Company</li>
+                            <li>About</li>
+                            <li>Blog</li>
+                            <li>Careers</li>
+                            <li>Index</li>
+                            <li>Charter</li>
+                            <li>GPT-4</li>
+                            <li>Security</li>
+                            <li>Customer stories</li>
+                            <li>Safety</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <div style="display: flex;">
+                <div style="font-size: 20px;">
+                    <ul style="list-style-type: none;">
+                        <li>OpenAI © 2015–2023</li>
+                        <li>Terms & policies</li>
+                        <li>Privacy policy</li>
+                        <li>Brand Guidelines</li>
+                    </ul>
+                </div>
+                <div style="margin-left: 250px;">
+                    <ul style="display: flex; margin: 0; padding: 0; list-style-type: none;">
+                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">Twitter</li>
+                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">YouTube</li>
+                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">GitHub</li>
+                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">SoundCloud</li>
+                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">LinkedIn</li>
+                    </ul>
+                    <P style="margin-left: 17px; font-size: 20px; margin-top: 38px;">Back To Top </P>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    <div style="padding: 1px; margin: 0%;">
+        <hr style="height: 1px; background-color: white;">
+        <br>
+        <hr style="height: 3px; background-color: white;">
+        <br>
+        <hr style="height: 6px; background-color: white;">
+        <br>
+        <hr style="height: 9px; background-color: white;">
+        <br>
+        <hr style="height: 13px; background-color: white;">
+        <br>
+        <hr style="height: 16px; background-color: white;">
+        <br>
+        <hr style="height: 20px; background-color: white;">
+        <br>
+        <hr style="height: 27px; background-color: white;">
+        <br>
+        <hr style="height: 34px; background-color: white;">
+        <br>
+        <hr style="height: 44px; background-color: white;">
+        <br>
+        <hr style="height: 55px; background-color: white;">
+        <br>
+        <hr style="height: 69px; background-color: white;">
+        <br>
+    </div>
 </body>
 
 </html>
