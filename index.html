@@ -1,402 +1,416 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>website Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Up Work</title>
     <style>
-        .navbar {
+        .navBar {
+            border: 2px solid rgb(244, 203, 0);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 1rem 0 1rem;
+        }
+
+        .navBar .leftSide {
+            border: 2px solid gray;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
-        .navbar1 {
-            display: flex;
+        .navBar .middle {
+            flex-basis: 300px;
         }
 
-        .header-ul {
+        .navBar .middle input {
+            width: 100%;
+        }
+
+        .navBar .rightSide {
             display: flex;
+            align-items: center;
+
+        }
+
+        .navBar .rightSide a,
+        .navBar .rightSide button {
+            margin-left: 2rem;
+        }
+
+        .navBar .leftSide ul {
+            display: flex;
+            list-style: none;
+            font-family: var(--font-family-base);
+        }
+
+        .navBar .leftSide ul li {
+            margin-right: 1rem;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+
+        /* Styles for the search box */
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            overflow: hidden;
+            width: 300px;
+        }
+
+        .search-icon {
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+        }
+
+        .search-input:hover {
+            background-color: #ccc;
+        }
+
+        /* Style for the search button */
+        .search-button {
+            /* background-color: #0d6efd; */
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+
+        }
+
+        /* Style for the search button on hover */
+        .search-button:hover {
+            background-color: #ccc;
+        }
+
+        .h-p {
             margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
-
-        .header-li {
-            float: left;
-        }
-
-        .header-li-a a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .header-li a:hover {
-            background-color: blue;
-        }
-
-        .navbar2 {
-            text-decoration: none;
-        }
-
-        .navbar3 {
-            width: 600px;
-            height: 550px;
-            margin-left: 320px;
-            margin-top: 2px;
-            display: flex;
-        }
-
-        .image {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .greensection {
-            background-color: blue;
+            /* This removes the default margin on <p> elements. */
+            margin-bottom: 5px;
+            /* Add a margin to create spacing between paragraphs. Adjust this value as needed. */
         }
     </style>
 </head>
 
-<body style="background-color: black; color: white;">
-    <nav class="navbar">
-        <div class="navbar1">
-            <img src="images/image1.png" width="90px" alt="">
-        </div>
-        <div>
-            <ul class="header-ul">
-                <li class="header-li header-li-a"><a href="">Research</a></li>
-                <li class="header-li header-li-a"><a href="">API</a></li>
-                <li class="header-li header-li-a"><a href="">ChatPGT</a></li>
-                <li class="header-li header-li-a"><a href="">Safety</a></li>
-                <li class="header-li header-li-a"><a href="">Company</a></li>
+<body>
+    <!-- header section start from here -->
+    <nav class="navBar">
+        <div class="leftSide">
+            <img width="150px" src="images/image1.png" alt="">
+            <ul>
+
+                <li>Find Talent <img src="images/image2.png" alt=""></li>
+                <li>Find Work <img src="images/image2.png" alt=""></li>
+                <li>Why Upwork <img src="images/image2.png" alt=""></li>
+                <li>Enterprise <img src="images/image2.png" alt=""></li>
             </ul>
         </div>
-        <div class="navbar2">
-            <ul class="header-ul">
-                <li class="header-li header-li-a"><a href="">Search</a></li>
-                <li class="header-li header-li-a"><a href="">Login</a></li>
-            </ul>
+
+        <div class="middle">
+            <div class="search-container">
+                <div class="search-box">
+                    <div class="search-icon">
+                        <img src="images/image3.png" alt="Search Icon" width="24" height="24">
+                    </div>
+                    <input type="text" class="search-input" placeholder="Search..." />
+                    <button class="search-button" placeholder="search">Search</button>
+                </div>
+            </div>
+
         </div>
-        <button
-            style="font-size: 20px; margin-right: 10px; background-color: black; color: white;">TryChatGPT</button>
+
+        <div class="rightSide">
+
+            <a href="df" style="text-decoration: none; color: black; font-size: 18px;">Log in</a>
+            <button
+                style="background-color: rgba(17, 126, 32, 0.87); color: white; padding: 10px; border-radius: 40px; width: 100px; font-size: 15px;">Sign
+                up</button>
+        </div>
+
     </nav>
-    <div class="navbar3">
+    <!-- header section end here  -->
+
+
+    <!-- after the head section the code start from here -->
+    <nav class="navBar">
+        <div class="leftSide">
+            <ul>
+
+                <li>Development & IT <img src="images/image2.png" alt=""></li>
+                <li>AI services<img src="images/image2.png" alt=""></li>
+                <li>Design Creative<img src="images/image2.png" alt=""></li>
+                <li>Sales and Marketing<img src="images/image2.png" alt=""></li>
+                <li>Admin and Customer Support <img src="images/image2.png" alt=""></li>
+                <li>More<img src="images/image2.png" alt=""></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- after the section the code end to here -->
+
+
+    <!-- the body section code start from here -->
+    <div style="border: 1px solid red;  margin: 3rem; display: flex; border: 1px solid red;">
+        <div style="display: flex; border: 1px solid red; flex-wrap: wrap;">
+            <h1 style="color: rgba(17, 126, 32, 0.87); line-height: 70px; font-size: 80px;">
+                How work<br>
+                should work</h1>
+            <p style="font-size: 30px; margin-bottom: 60px; line-height: 40px; ">Forget the old rules. You can have the
+                best people.
+                Right now. Right here.</p>
+            <button style="background-color: rgba(17, 126, 32, 0.87); color: white; padding: 10px; border-radius: 40px; width:
+                 130px; font-size: 15px;">Get Start</button>
+        </div>
         <div>
-            <p style="font-size: 120px;">DALL.E3</p>
-            <p style="font-size: 20px;">DALL·E 3 understands significantly more nuance and detail than our previous
-                systems, allowing you to
-                easily translate your ideas into exceptionally accurate images.</p>
-            <div>
-                <button style="font-size: 20px; background-color: black; color: aliceblue; border: solid white;"
-                    type="button">Follow us on Instagram</button>
-                <a style="font-size: 20px; margin-left: 10px; color: white; background-color: black; "
-                    href="">TryChatGPT(DALL.E3 Coming soon!)</a>
-            </div>
+            <img style="margin-left: 400px; border-radius: 100%;" src="images/image5.jpg" height="400px" width="400px">
+
         </div>
     </div>
-    <div class="image">
-        <div>
-            <a href=""><img src="images/image2.jpg" width="310px" alt=""></a>
-        </div>
-        <div>
-            <a href=""><img src="images/image3.jpg" width="310px" alt=""></a>
-        </div>
-        <div>
-            <a href=""><img src="images/image4.jpg" width="310px" alt=""></a>
-        </div>
-        <div>
-            <a href=""><img src="images/image5.jpg" width="310px" alt=""></a>
-        </div>
-
+    <div style="margin: 3rem;">
+        <span style="font-size: 20px; color: #b1a7a7; margin-top: 70px;">Trusted</span>
     </div>
-    <hr>
-    <div style="  display: flex;">
-        <div style="width: 700px;">
-            <h2 style="font-size: 40px;">About DALL·E 3</h2>
+    <div style="display: flex; border: 1px solid red; gap: 20px; margin: 3rem;">
+        <img src="images/image6.png">
+        <img src="images/image7.png" alt="">
+        <img src="images/image8.png" width="50px" alt="">
+    </div>
+    <!-- The video section code is start from here  -->
+
+    <div style="margin: 3rem; border: 1px solid rgb(17, 255, 176); display: flex;">
+        <div style="border: 1px solid red; border-radius: 20px ; background-color: #e6f0e4; width: 500px ;
+             height: 370px;">
+
+            <video autoplay muted controls width="300px" height="300px"
+                style="border-radius: 30px; margin-left: 100px; margin-top: 30px;">>
+                <source src="images/video.mp4">
+            </video>
         </div>
-        <div>
-            <p style="font-size: 30px; margin-left: 500px;">
-                DALL·E 3 is now in research preview and will be available to ChatGPT Plus and Enterprise customers in
-                October, via the API and in Labs later this fall.
-            </p>
+        <div style="border: 1px solid red; margin-left: 50px;">
+
+            <div style="border: 1px solid red; ">
+                <h1 style="font-size: 40px; font-family:unset;">Up your work game, it’s easy</h1>
+            </div>
+            <div style="display: flex; border: 1px solid red; align-items: center;  gap: 10px;">
+                <img src="images/image9.png" alt="" style="margin-bottom: 40px;">
+                <div style="border: 1px solid red;">
+                    <p class="h-p" style="font-size: 20px; font-family: Sans-serif;">No cost to join</p>
+                    <p class="h-p" style="font-size: 13px; font-family: Sans-serif;">Register and browse professionals,
+                        explore projects, or even book a consultation.</p>
+                </div>
+            </div>
+            <div style="display: flex; border: 1px solid red; align-items: center;  gap: 10px;">
+                <img src="images/image10.png" alt="" style="margin-bottom: 40px;">
+                <div style="border: 1px solid red;">
+                    <p class="h-p" style="font-size: 20px; font-family: Sans-serif;">Post a job and hire top talent</p>
+                    <p class="h-p" style="font-size: 13px; font-family: Sans-serif;">Finding talent doesn’t have to be a
+                        chore. Post a job or we can search for you!</p>
+                </div>
+            </div>
+            <div style="display: flex; border: 1px solid red; align-items: center;  gap: 10px;">
+                <img src="images/image11.png" alt="" style="margin-bottom: 40px;">
+                <div style="border: 1px solid red;">
+                    <p class="h-p" style="font-size: 20px; font-family: Sans-serif;">Work with the best—without breaking
+                        the bank</p>
+                    <p class="h-p" style="font-size: 13px; font-family: Sans-serif;">Upwork makes it affordable to up
+                        your work and take advantage of low transaction rates.</p>
+
+                </div>
+
+            </div>
+            <button style="background-color: rgba(17, 126, 32, 0.87); color: white; padding: 8px; border-radius: 40px; width:
+                 140px; font-size: 15px; margin-top: 20px;">Sign up for free</button>
+            <button style=" border: 0.5px solid rgba(17, 126, 32, 0.87); background-color: white; color: rgba(17, 126, 32, 0.87); border-color:rgba(17, 126, 32, 0.87); 
+            padding: 8px; border-radius: 40px; width: 140px; font-size: 15px; margin-top: 20px;">Learn how to
+                hire</button>
         </div>
     </div>
-    <hr>
-    <div>
-        <p style="font-size: 50px; padding: 15px;">Modern text-to-image systems have a tendency to ignore words or
-            descriptions, forcing users to learn prompt engineering. DALL·E 3 represents a leap forward in our ability to
-            generate images that exactly adhere to the text you provide.</p>
-        <img src="images/image9.jpg">
-        <hr>
-        <p style="font-size: 60px; padding: 10px;">Even with the same prompt, DALL·E 3 delivers significant improvements
-            over DALL·E 2.
-        </p>
-        <img src="images/image8.jpg">
+    <!-- The video code section is end there -->
+
+
+    <!-- After the video section code is start from here -->
+
+    <div style="border: 1px solid red; margin: 3rem; margin-bottom: 20px; flex-wrap: wrap;">
+        <p style="font-size: 35px; margin: 0%; padding: 5px;"> Browse talent by category</p>
+        <div style="display: flex;">
+            <p style="margin: 0%; margin-left: 8px; padding: 0px;">Looking for work?</p>
+            <a href="#" style="margin-left: 4px; color: rgba(17, 126, 32, 0.87); text-decoration: underline;">Browse
+                job</a>
+        </div>
     </div>
-
-    <!-- The green section of the website starts from here  -->
-
-    <div class="greensection">
-        <br>
-        <br>
-        <br>
-        <hr>
-        <div style="padding: 15px;">
-            <p style="font-size: 50px;">DALL·E 3 is built natively on ChatGPT, which lets you use ChatGPT as a brainstorming partner and refiner of your prompts. Just ask ChatGPT what you want to see in anything from a simple sentence to a detailed paragraph.</p>
-            <hr>
-        </div>
-        <div style="display: flex; justify-content: space-between; padding: 15px;">
-            <div style="width: 1600px; height: 300px;">
-                <p style="font-size: 50px;">DALL·E 3 in ChatGPT</p>
-            </div>
-            <div>
-                <p style="font-size: 25px; margin-left: 250px;">
-                    When prompted with an idea, ChatGPT will automatically generate tailored, detailed prompts for DALL·E 3 that bring your idea to life. If you like a particular image, but it’s not quite right, you can ask ChatGPT to make tweaks with just a few words.</p>
-                <p style="font-size: 25px; margin-left: 250px;">DALL·E 3 will be available to ChatGPT Plus and Enterprise customers in early October. As with DALL·E 2, the images you create with DALL·E 3 are yours to use, and you don't need our permission to reprint, sell, or merchandise them.</p>
-            </div>
-
-        </div>
-
-        <video style="padding: 15px;" src="images/video.mp4" controls width="1300px"></video>
-
-        <!-- After the video section, the coding starts from here -->
-        <div style="background-color: black;">
-            <br>
-                <br>
-                <br>
-                <hr>
-
-            <div style="background-color: black; display: flex; padding: 15px; ">
-
-                
-                <div style="width: 700px; padding: 15px;">
-                    <p style="font-size: 45px;">A focus on safety</p>
-                </div>
-                <div style="padding: 15px;">
-                    <p style="font-size: 30px; margin-left: 360px;">
-                        Like previous versions, we’ve taken steps to limit DALL·E 3’s ability to generate violent, adult, or hateful content.</p>
-                </div>
-            </div>
-            <div style="background-color: black; display: flex; padding: 15px;">
-                <div style="width: 1950px; padding: 15px;">
-                    <h1>Preventing harmful generations</h1>
-                </div>
-                <div>
-                    <p style="font-size: 20px; margin-left: 280px; padding: 15px;">
-                        DALL·E 3 has mitigations to decline requests that ask for a public figure by name. We improved safety performance in risk areas like generation of public figures and harmful biases related to visual over/under-representation, in partnership with red teamers—domain experts who stress-test the model—to help inform our risk assessment and mitigation efforts in areas like propaganda and misinformation.</p>
-                </div>
-
-            </div>
-
-            <div style="background-color: black; display: flex; padding: 15px;">
-                <div style="width: 1850px;">
-                    <h1>Internal testing</h1>
-
-                </div>
-                <div>
-                    <p style="font-size: 20px; margin-left: 280px; padding: 15px;">
-                        We’re also researching the best ways to help people identify when an image was created with AI. We’re experimenting with a provenance classifier—a new internal tool that can help us identify whether or not an image was generated by DALL·E 3—and hope to use this tool to better understand the ways generated images might be used. We’ll share more soon.</p>
-
-                </div>
-
-            </div>
+    <!-- The browse content code are finish  here -->
 
 
-            <hr>
-
-            <div style=" display: flex;">
-                <div style="width: 1150px;">
-                    <h1 style="font-size: 50px;">Creative control</h1>
-
-                </div>
-
-                <div>
-                    <p style="font-size: 30px; margin-left: 280px; padding: 15px;">
-                        DALL·E 3 is designed to decline requests that ask for an image in the style of a living artist. Creators can now also opt their images out from training of our future image generation models.
-                    </p>
-
-                </div>
-            </div>
-
-            <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; gap: 3px;">
-                <img src="images/images2/image1.jpeg">
-                <img src="images/images2/image2.png">
-                <img src="images/images2/image3.jpeg">
-                <img src="images/images2/image4.png">
-                <img src="images/images2/image5.jpeg">
-                <img src="images/images2/image6.png">
-                <img src="images/images2/image7.jpeg">
-                <img src="images/images2/image8.jpeg">
-                <img src="images/images2/image9.jpeg">
-                <img src="images/images2/image10.jpeg">
-                <img src="images/images2/image11.jpeg">
-                <img src="images/images2/image12.png">
-                <img src="images/images2/image13.jpeg">
-                <img src="images/images2/image14.jpeg">
-                <img src="images/images2/image15.png">
-                <img src="images/images2/image16.png">
-                <img src="images/images2/image17.jpeg">
-                <img src="images/images2/image18.jpeg">
-                <img src="images/images2/image19.jpeg">
-                <img src="images/images2/image20.jpeg">
-                <img src="images/images2/image21.png">
-                <img src="images/images2/image22.png">
-            </div>
-            <div style="display: flex;">
-                <div style="display: flex;">
-                    <h1 style="background-color: black; color: white;">Credits</h1>
-                </div>
-                <div style="display: flex; margin-left: 650px;">
-                    <p style="font-size: 22px; margin-left: 2px;">Core Research and Execution
-                        Gabriel Goh, James Betker, Li Jing, Aditya Ramesh</p>
-                </div>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Research Contributors—Primary
-                    Tim Brooks, Jianfeng Wang, Lindsey Li, Long Ouyang, Juntang Zhuang, Joyce Lee, Prafulla Dhariwal, Casey Chu, Joy Jiao</p>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Research Contributors—Secondary
-                    Jong Wook Kim, Alex Nichol, Yang Song, Lijuan Wang, Tao Xu</p>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Inference Optimization
-                    Connor Holmes, Arash Bakhtiari, Umesh Chand, Zhewei Yao, Samyam Rajbhandari, Yuxiong He</p>
-            </div>
-            <div style="display: flex;  margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Product—Primary
-                    Yufei Guo, Luke Miller, Joyce Lee, Wesam Manassra, Anton Tananaev, Chester Cho, Rachel Lim, Meenaz Merchant</p>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Product—Secondary
-                    Dave Cummings, Rajeev Nayak, Sriya Santhanam</p>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Safety—Primary
-                    Sandhini Agarwal, Michael Lampe, Katarina Slama, Kim Malfacini, Bilva Chandra, Ashyana-Jasmine Kachra, Rosie Campbell, Florencia Leoni Aleman, Madelaine Boyd, Shengli Hu, Johannes Heidecke</p>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Safety—Secondary
-                    Lama Ahmad, Chelsea Carlson, Henry Head, Andrea Vallone, CJ Weinmann, Lilian Weng</p>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Communications
-                    Alex Baker-Whitcomb, Ryan Biddy, Ruby Chen, Thomas Degry, Niko Felix, Elie Georges, Lindsey Held, Chad Nelson, Kendra Rimbach, Natalie Summers, Justin Wang, Hannah Wong, Kayla Wood</p>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Legal and Public Policy
-                    Che Chang, Jason Kwon, Fred von Lohmann, Ashley Pantuliano, David Robinson, Tom Rubin, Thomas Stasi</p>
-            </div>
-            <div style="display: flex; margin-left: 650px;">
-                <p style="font-size: 22px; margin-left: 104px;">Special Thanks
-                    Alec Radford, Mark Chen, Katie Mayer, Misha Bilenko, Mikhail Parakhin, Bob McGrew, Mira Murati, Greg Brockman, Sam Altman</p>
-            </div>
-
-
-            <div style=" display: flex;">
-                <div>
-                    <img src="images/image1.png" width="170px" alt="">
-                </div>
-                <div style="margin-left: 400px; display: flex; font-size: 25px; text-decoration: none; ">
-                    <div>
-                        <ul style="list-style: none;">
-                            <li>Research</li>
-                            <li>Index</li>
-                            <li>Overview</li>
-                            <li>GPT-4</li>
-                            <li>DALL-E3</li>
-                        </ul>
-
-                    </div>
-                    <div>
-                        <ul style="list-style: none;">
-                            <li>API</li>
-                            <li>Overview</li>
-                            <li>Data privacy</li>
-                            <li>Pricing</li>
-                            <li>Docs</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul style="list-style: none;">
-                            <li>ChatGPT</li>
-                            <li>Index</li>
-                            <li>Overview</li>
-                            <li>Enterprise</li>
-                            <li>Try ChatGPT</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul style="list-style: none;">
-                            <li>Company</li>
-                            <li>About</li>
-                            <li>Blog</li>
-                            <li>Careers</li>
-                            <li>Index</li>
-                            <li>Charter</li>
-                            <li>GPT-4</li>
-                            <li>Security</li>
-                            <li>Customer stories</li>
-                            <li>Safety</li>
-                        </ul>
+    <!-- STARS rating code are start from here  -->
+    <div style="border: 1px solid red; display: flex; margin: 3rem; flex-wrap: wrap;">
+        <div style="border: 1px solid red; display: flex; flex-wrap: wrap; margin-left: 50px;">
+            <div style="margin: 1rem; border: 1px solid red; width: 250px; background-color: rgb(247, 237, 237); border-radius: 10px;"
+                onmouseover="this.style.backgroundColor='rgb(247, 237, 237)'; this.style.borderColor='rgb(247, 237, 237)';"
+                onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+                <div style="margin-left: 13px;">
+                    <h2>Development & IT</h2>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/image12.png" width="14px" height="14px">
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p style="margin-left: 7px;">4.92/5</p>
+                            </div>
+                            <div>
+                                <p style="margin-left: 7px;">1853 Skills</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div style="margin: 1rem; border: 1px solid red; width: 250px; background-color: rgb(247, 237, 237); border-radius: 10px;"
+                onmouseover="this.style.backgroundColor='rgb(247, 237, 237)'; this.style.borderColor='rgb(247, 237, 237)';"
+                onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+                <div style="margin-left: 13px;">
+                    <h2>AI Services</h2>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/image12.png" width="14px" height="14px">
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p style="margin-left: 7px;">4.8/5</p>
+                            </div>
+                            <div>
+                                <p style="margin-left: 7px;">294 Skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 1rem; border: 1px solid red; width: 250px; background-color: rgb(247, 237, 237); border-radius: 10px;"
+                onmouseover="this.style.backgroundColor='rgb(247, 237, 237)'; this.style.borderColor='rgb(247, 237, 237)';"
+                onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+                <div style="margin-left: 13px;">
+                    <h2>Design & Creative</h2>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/image12.png" width="14px" height="14px">
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p style="margin-left: 7px;">4.91/5</p>
+                            </div>
+                            <div>
+                                <p style="margin-left: 7px;">968 Skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 1rem; border: 1px solid red; width: 250px; background-color: rgb(247, 237, 237); border-radius: 10px;"
+                onmouseover="this.style.backgroundColor='rgb(247, 237, 237)'; this.style.borderColor='rgb(247, 237, 237)';"
+                onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+                <div style="margin-left: 13px;">
+                    <h2>Sales & Marketing</h2>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/image12.png" width="14px" height="14px">
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p style="margin-left: 7px;">4.92/5</p>
+                            </div>
+                            <div>
+                                <p style="margin-left: 7px;">505 Skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 1rem; border: 1px solid red; width: 250px; background-color: rgb(247, 237, 237); border-radius: 10px;"
+                onmouseover="this.style.backgroundColor='rgb(247, 237, 237)'; this.style.borderColor='rgb(247, 237, 237)';"
+                onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+                <div style="margin-left: 13px;">
+                    <h2>Writing & Translation</h2>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/image12.png" width="14px" height="14px">
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p style="margin-left: 7px;">4.92/5</p>
+                            </div>
+                            <div>
+                                <p style="margin-left: 7px;">508 Skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 1rem; border: 1px solid red; width: 250px; background-color: rgb(247, 237, 237); border-radius: 10px;"
+                onmouseover="this.style.backgroundColor='rgb(247, 237, 237)'; this.style.borderColor='rgb(247, 237, 237)';"
+                onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+                <div style="margin-left: 13px;">
+                    <h2>Admin & Customer Support</h2>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/image12.png" width="14px" height="14px">
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p style="margin-left: 7px;">4.77/5</p>
+                            </div>
+                            <div>
+                                <p style="margin-left: 7px;">508 Skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin: 1rem; border: 1px solid red; width: 250px; background-color: rgb(247, 237, 237); border-radius: 10px;"
+                onmouseover="this.style.backgroundColor='rgb(247, 237, 237)'; this.style.borderColor='rgb(247, 237, 237)';"
+                onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+                <div style="margin-left: 13px;">
+                    <h2>Finance & Accounting </h2>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/image12.png" width="14px" height="14px">
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p style="margin-left: 7px;">4.79/5</p>
+                            </div>
+                            <div>
+                                <p style="margin-left: 7px;">650 Skills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            </div>
-            <hr>
-            <div style="display: flex;">
-                <div style="font-size: 20px;">
-                    <ul style="list-style-type: none;">
-                        <li>OpenAI © 2015–2023</li>
-                        <li>Terms & policies</li>
-                        <li>Privacy policy</li>
-                        <li>Brand Guidelines</li>
-                    </ul>
-                </div>
-                <div style="margin-left: 250px;">
-                    <ul style="display: flex; margin: 0; padding: 0; list-style-type: none;">
-                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">Twitter</li>
-                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">YouTube</li>
-                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">GitHub</li>
-                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">SoundCloud</li>
-                        <li style="display: block; color: white; text-align: center; padding: 15px; text-decoration: none; font-size: 18px;">LinkedIn</li>
-                    </ul>
-                    <P style="margin-left: 17px; font-size: 20px; margin-top: 38px;">Back To Top </P>
+            <div style="margin: 1rem; border: 1px solid red; width: 250px; background-color: rgb(247, 237, 237); border-radius: 10px;"
+                onmouseover="this.style.backgroundColor='rgb(247, 237, 237)'; this.style.borderColor='rgb(247, 237, 237)';"
+                onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+                <div style="margin-left: 13px;">
+                    <h2>Development & IT</h2>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/image12.png" width="14px" height="14px">
+                        <div style="display: flex; gap: 30px;">
+                            <div>
+                                <p style="margin-left: 7px;">4.92/5</p>
+                            </div>
+                            <div>
+                                <p style="margin-left: 7px;">1853 Skills</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
         </div>
-
     </div>
-    <div style="padding: 1px; margin: 0%;">
-        <hr style="height: 1px; background-color: white;">
-        <br>
-        <hr style="height: 3px; background-color: white;">
-        <br>
-        <hr style="height: 6px; background-color: white;">
-        <br>
-        <hr style="height: 9px; background-color: white;">
-        <br>
-        <hr style="height: 13px; background-color: white;">
-        <br>
-        <hr style="height: 16px; background-color: white;">
-        <br>
-        <hr style="height: 20px; background-color: white;">
-        <br>
-        <hr style="height: 27px; background-color: white;">
-        <br>
-        <hr style="height: 34px; background-color: white;">
-        <br>
-        <hr style="height: 44px; background-color: white;">
-        <br>
-        <hr style="height: 55px; background-color: white;">
-        <br>
-        <hr style="height: 69px; background-color: white;">
-        <br>
+    <!-- STARS code are end here and  -->
+
+    
+    <div style="border: 1px solid red; margin: 3rem; background-color: rgb(56, 100, 55);">
+        <h2 style="color: #fff;">Enterprise Suite</h2>
     </div>
 </body>
 
