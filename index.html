@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unit Converters</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin: 20px 0;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff9900;
+        }
+
+        input[type="text"][readonly] {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h2>Marla to Square Feet Converter</h2>
+        <form onsubmit="convertMarla(event)">
+            Input marla: <input type="text" id="marla" step="0.1" required>
+            <br><br>
+            <button>Convert</button>
+            <br><br>
+            In square feet: <input type="text" id="square" readonly>
+        </form>
+
+        <hr>
+
+        <h2>Degree to Fahrenheit Converter</h2>
+        <form onsubmit="convertDegree(event)">
+            Temperature in degrees: <input type="text" id="temp" step="0.1">
+            <button>Convert</button>
+            <br><br>
+            Temperature in Fahrenheit: <input type="text" id="result" readonly>
+        </form>
+
+        <hr>
+
+        <h2>Yard to Square Feet Converter</h2>
+        <form onsubmit="convertYard(event)">
+            Input in yard: <input type="text" id="yard">
+            <br><br>
+            <button>Convert</button>
+            <br><br>
+            In square feet: <input type="text" id="feet" readonly>
+        </form>
+    </div>
+
+    <script>
+        function convertMarla(event) {
+            event.preventDefault();
+            let marla = document.querySelector("#marla").value;
+            let calculate = marla * 272.25;
+            document.querySelector("#square").value = calculate.toFixed(2);
+        }
+
+        function convertDegree(event) {
+            event.preventDefault();
+            let a = document.querySelector("#temp").value;
+            let calculate = (a * 9 / 5) + 32;
+            document.querySelector("#result").value = calculate.toFixed(2);
+        }
+
+        function convertYard(event) {
+            event.preventDefault();
+            var enter = document.getElementById("yard").value;
+            var calculate = enter * 9;
+            document.getElementById("feet").value = calculate.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
